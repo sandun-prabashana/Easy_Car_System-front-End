@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="viewport" content="width=device-width, initial-scale=1>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Easy Car Rental</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;position: fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental</H></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" id="home1">
+                        <a class="nav-link active" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/home_30px.png">Home</a>
+                        <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/signin_30px.png">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/add_user_male_30px.png">Sign Up</a>
+                    </li>
+                    <li class="nav-item" id="contact">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/contact_30px.png">Contact Us</a>
+                    </li>
+                    <li class="nav-item" id="help">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+    <section class="home" id="home">
+        <div class="blend"></div>
+    </section>
+    <section class="login" id="login">
+        <div class="video">
+            <video  width="100%" height="100%"
+                    autoplay loop muted
+            <source src="Videos/pharrell-williams-happy-30-seconds-of-happy-animation-dance-cover720p_eYldfENv_YMMQ.mp4" type="video/mp4">
+        </div>
+        <h1>Sign In to Continue</h1>
+        <p class="p1">An Account is required to continue</p>
+        <p class="p2">If you don't have an account You<br>can<a id="btnRegister" class="reg" href="customeSave.html" style="text-decoration: none">Register Here</a></p>
+
+        <form>
+            <div class="email-container container-fluid">
+                <label for="txtEmail"></label>
+                <input id="input_email" placeholder="Enter email" type="text">
+                <span class="lbl-error" id="lblemail"></span>
+            </div>
+            <div class="password-container container-fluid">
+                <label for="password"></label>
+                <i class="far fa-eye-slash" id="password-logo" onclick="showPassword()"></i>
+                <input id="input_password" placeholder="Password" type="password">
+            </div>
+            <a class="rec" href="#">Recovery password</a>
+            <button type="button" class="lbtn">Sign In</button>
+        </form>
+    </section>
+</main>
+<footer></footer>
+<script src = js/jquery-3.6.0.min.js></script>
+<script src = js/bootstrap.min.js></script>
+<script src="assets/script/script.js"></script>
+</body>
+</html>

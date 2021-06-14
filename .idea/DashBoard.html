@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="viewport" content="width=device-width, initial-scale=1>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="assets/css/DashBoardstyle.css" rel="stylesheet">
+    <link href="assets/css/DashBoardstyle.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental</H></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" id="home1">
+                        <a class="nav-link active" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/home_30px.png">Home</a>
+                        <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/signin_30px.png">Booking Vehicle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/add_user_male_30px.png">Pay Vehicle Rental</a>
+                    </li>
+                    <li class="nav-item" id="contact">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/contact_30px.png">Contact Us</a>
+                    </li>
+                    <li class="nav-item" id="help">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="side-panel-container" style="position: absolute">
+        <aside>
+            <p> Admin </p>
+            <img src="assests/icons/icons8-dashboard-layout-24.png" class="dash-png">
+            <a href="javascript:switchToDashboard();" class="btndash" id="btndash" onclick='switchToDashboard();'>
+                <i class="fa fa-user-o" aria-hidden="true">
+                </i>
+                Dashboard
+            </a>
+            <img src="assests/icons/icons8-dashboard-layout-24.png" class="car-png">
+            <a href="javascript:switchToCars();" id="btncar" onclick="switchToCars()">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                Manage Cars
+            </a>
+            <img src="assests/icons/icons8-dashboard-layout-24.png" class="customer-png">
+            <a href="javascript:switchToCustomer();" id="btncustomer" onclick="switchToCustomer()">
+                <i class="fa fa-clone" aria-hidden="true"></i>
+                Manage Customer
+            </a>
+            <img src="assests/icons/icons8-dashboard-layout-24.png" class="rental-png">
+            <a href="javascript:switchToRental();" id="btnrental" onclick="switchToRental()">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                Rental Request
+            </a>
+            <img src="assests/icons/icons8-dashboard-layout-24.png" class="Income-png">
+            <a href="javascript:switchToIncome();" id="btnincome" onclick="switchToIncome()">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                Income
+            </a>
+        </aside>
+
+    </section>
+
+<div class="container" style="margin-top: 50px">
+    <div class="row">
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png">No of registered users</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header" style="height: 67px;"><img src="img/new_ticket_40px.png">Total bookings for day</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="img/car_50px.png">No of available Car</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"><img src="img/car_50px.png">No of reserved cars</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+    </div>
+</div>
+
+<div class="container" style="margin-top: 50px">
+    <div class="row">
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header" style="height: 67px;"><img src="img/driver_40px.png">No of available Drivers</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"style="height: 67px;"><img src="img/driver_40px.png">No of occupied Drivers</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header" style="height: 67px;"><img src="img/maintenance_40px.png">cars need maintenance</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+        <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header"style="height: 67px;"><img src="img/maintenance_40px.png">cars under maintenance</div>
+            <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                <h1 style="text-align: center">00</h1>
+            </div>
+        </div></div>
+    </div>
+</div>
+</main>
+
+
+<script src = js/jquery-3.6.0.min.js></script>
+<script src = js/bootstrap.min.js></script>
+<script src="assets/script/script.js"></script>
+</body>
+</html>

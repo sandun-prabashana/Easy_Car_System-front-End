@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="viewport" content="width=device-width, initial-scale=1>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>CustomerRegister</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="assets/css/vehiclestyle.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental</H></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" id="home1">
+                        <a class="nav-link active" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/home_30px.png">Home</a>
+                        <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/signin_30px.png">Booking Vehicle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/add_user_male_30px.png">Pay Vehicle Rental</a>
+                    </li>
+                    <li class="nav-item" id="contact">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/contact_30px.png">Contact Us</a>
+                    </li>
+                    <li class="nav-item" id="help">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <<section >
+    <div class="container" >
+
+        <div class="modal-content" style="margin-top: 40px">
+            <div class="modal-header" style="background-color: #f8d7da;color: white">
+                <h5 class="modal-title" id="ItexampleModalLabel">Vehicle</h5>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="input-code">Vehicle Id</label>
+                        <input  type="text" class="form-control" id="vehicleid" aria-describedby="emailHelp" placeholder="Enter Vehicle Id">
+                        <span class="lbl-error" id="lblvehicleid"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-name">Brand</label>
+                        <input type="text" class="form-control" id="brand" aria-describedby="emailHelp" placeholder="Enter Brand">
+                        <span class="lbl-error" id="lblbrand"></span>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-qty">Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Enter Color">
+                        <span class="lbl-error" id="lblcolor"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">No_Of_Passengers</label>
+                        <input type="text" class="form-control" id="noofpassengers" placeholder="Enter No_Of_Passengers">
+                        <span class="lbl-error" id="lblnoofpassengers"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Transmission_Type</label>
+                        <input type="text" class="form-control" id="transtype" placeholder="Enter Transmission_Type">
+                        <span class="lbl-error" id="lbltranstype"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Fuel Type</label>
+                        <input type="text" class="form-control" id="fueltype" placeholder="Enter Fuel Type">
+                        <span class="lbl-error" id="lblfueltype"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Dailty_Rate</label>
+                        <input type="text" class="form-control" id="dailyrate" placeholder="Enter Dailty_Rate">
+                        <span class="lbl-error" id="lbldailyrate"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Monthly Rate</label>
+                        <input type="text" class="form-control" id="monthlyrate" placeholder="Enter Monthly Rate">
+                        <span class="lbl-error" id="lblmonthlyrate"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Extra_Km_Price</label>
+                        <input type="text" class="form-control" id="extrakmprice" placeholder="Enter Extra_Km_Price">
+                        <span class="lbl-error" id="lblextrakmprice"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Free_Mileage</label>
+                        <input type="text" class="form-control" id="freemileage" placeholder="Enter Free_Mileage">
+                        <span class="lbl-error" id="lblfreemileage"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Total_Km</label>
+                        <input type="text" class="form-control" id="totkm" placeholder="Enter Total_Km">
+                        <span class="lbl-error" id="lbltotkm"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Status</label>
+                        <input type="text" class="form-control" id="status" placeholder="Enter Status">
+                        <span class="lbl-error" id="lblstatus"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Type</label>
+                        <input type="text" class="form-control" id="type" placeholder="Enter Type">
+                        <span class="lbl-error" id="lbltype"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Front_image</label>
+                        <input type="text" class="form-control" id="frontimage" placeholder="Enter Password">
+                        <span class="lbl-error" id="lblp"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Back_image</label>
+                        <input type="text" class="form-control" id="backimage" placeholder="Enter Password">
+                        <span class="lbl-error" id="lblp"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Left_image</label>
+                        <input type="text" class="form-control" id="leftimage" placeholder="Enter Password">
+                        <span class="lbl-error" id="lblp"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-price">Right_Image</label>
+                        <input type="text" class="form-control" id="rightimage" placeholder="Enter Password">
+                        <span class="lbl-error" id="lblp"></span>
+                    </div>
+
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="btnclear" type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                <button type="button" id="cusE" class="btn btn-warning">Edit</button>
+                <button id="delBuCu" type="button"  class="btn btn-danger">Delete</button>
+                <button id="btnsave" type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+
+
+
+<script src = js/jquery-3.6.0.min.js></script>
+<script src = js/bootstrap.min.js></script>
+<script src="assets/script/vehiclescript.js"></script>
+</body>
+</html>

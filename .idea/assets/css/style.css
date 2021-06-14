@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+.lbl-error {
+    color: red;
+    font-size: 0.9em;
+}
+#lblemail{
+    position: absolute;
+    top: 65px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: #F8F8F8;
+    overflow-x: hidden;
+}
+
+
+/*Nav Bar*/
+header > nav {
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+header > nav.sticky {
+    padding: 2px 0;
+    background: #b8b8b5;
+    transition: all 0.3s ease;
+}
+
+header > nav > .logo-container {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    left: 20px;
+}
+
+header > nav > .logo-container > h2 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+header > nav.sticky > .logo-container > h2 {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+header > nav > .logo-container > div {
+    position: absolute;
+    width: 35px;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+
+header > nav > ul {
+    position: absolute;
+    display: flex;
+    font-size: 16px;
+    column-gap: 50px;
+    list-style: none;
+}
+
+header > nav > .menu1 {
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+header > nav > .menu2 {
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+}
+
+header > nav > ul > li > a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+header > nav.sticky > ul > li > a {
+    color: black;
+    transition: all 0.3s ease;
+}
+
+header > nav > ul > li > a:hover {
+    color: #FFA500;
+    transition: all 0.3s ease;
+}
+
+header > nav.sticky > ul > li > a:hover {
+    color: #FBFBFB;
+    transition: all 0.3s ease;
+}
+
+header > nav > .profile-container {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 50%;
+    left: 94%;
+    transform: translate(-50%, -50%);
+}
+
+header > nav > .profile-container > .add-to-cart {
+    position: absolute;
+    background: url("../icons/icon-cart-white.png") no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+header > nav > .profile-container > .add-to-cart:hover {
+    background: url("../icons/icon-cart-black.png") no-repeat center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+header > nav > .profile-container > .profile {
+    position: absolute;
+    background: url("../icons/icon-profile-white.png") no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all 0.3s ease;
+}
+
+header > nav > .profile-container > .profile:hover {
+    transform: scale(1.1);
+    background: url("../icons/icon-profile-black.png") no-repeat center;
+    transition: all 0.3s ease;
+}
+
+/*--------------------------------------------------*/
+
+#contact{
+    position: absolute;
+    right: 105px;
+}
+#help{
+    position: absolute;
+    right: 18px;
+}
+#home1{
+    margin-left: 254px;
+}
+
+.p1{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    left: 17%;
+    top:40%;
+
+}
+
+
+.home {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+}
+
+.home > .blend {
+    position: absolute;
+    background-color: #303045;
+    width: 400%;
+    height: 100%;
+    opacity: 0.3;
+}
+
+/*------------------------*/
+
+/*Login styling*/
+.login {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F8F8F8;
+}
+
+.login > h1 {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    left: 15%;
+    top: 26%;
+}
+
+.p2{
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    left: 17%;
+    top: 48%;
+}
+
+.reg{
+    padding-left: 10px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: limegreen;
+    transition: all 0.3s ease-in-out;
+}
+
+.reg:hover {
+    color: black;
+    transition: all 0.5 ease-in-out;
+}
+
+/*#vd{*/
+/*    position: absolute;*/
+/*    width: 430px;*/
+/*    height: 430px;*/
+/*    background-size: cover;*/
+/*    top: 62%;*/
+/*    left: 50%;*/
+/*}*/
+
+.login > .image2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: url("../images/login/startman.svg") no-repeat center;
+    background-size: cover;
+    top: 70px;
+    left: 25px;
+}
+
+.login > form {
+    position: absolute;
+    width: 320px;
+    height: 270px;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.login > form > div {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+}
+
+.login > form > .email-container {
+    top: 0;
+}
+
+.login > form > .password-container {
+    top: 100px;
+}
+
+.login > form > div > input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #e9efee;
+    box-shadow: 2px 3px 4px 1px #e3e6e6;
+    color: gray;
+    position: absolute;
+    text-indent: 35px;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    left: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+.login > form > div > input:focus {
+    outline: none !important;
+    transition: all 0.1s ease-in-out;
+    border: 3px solid blue;
+}
+
+.login > form > .password-container > i {
+    position: absolute;
+    cursor: pointer;
+    color: gray;
+    z-index: 2;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.rec{
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: gray;
+    top: 170px;
+    right: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.rec:hover {
+    color: lime;
+    transition: all 0.3s ease-in-out;
+}
+
+.lbtn{
+    position: absolute;
+    background-color: limegreen;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 2px 3px 4px 1px #779e9e;
+    transition: all 0.3s ease-in-out;
+}
+
+.lbtn:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+
+/*---------------------------------------------------*/
+
+/*Registration view styling*/
+.login > .registration-popup {
+    position: absolute;
+    display: none;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container {
+    position: relative;
+    height: 550px;
+    /*height: 690px;*/
+    width: 900px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container > .right-side {
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.login > .registration-popup > .popup-container > .left-side {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: #4B7BF5;
+    overflow: hidden;
+}
+
+.login > .registration-popup > .popup-container > .right-side > h2 {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    width: max-content;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > h2 {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #4B7BF5;
+    width: max-content;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > span {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > div {
+    position: absolute;
+    width: 100px;
+    height: 60px;
+    top: 80px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .reg-as-customer-container {
+    left: 40%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > .reg-as-driver-container {
+    left: 61%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > div > button {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    border-radius: 30px;
+    border: 2px solid gray;
+    background: none;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > div > h3 {
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container {
+    position: absolute;
+    width: 100%;
+    height: 530px;
+    top: 160px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > .image {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../images/login/car.svg") no-repeat center;
+    background-size: contain;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > div {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > div > input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #e9efee;
+    box-shadow: 2px 3px 4px 1px #e3e6e6;
+    color: gray;
+    position: absolute;
+    text-indent: 35px;
+    width: 60%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    left: 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > div > input:focus {
+    outline: none !important;
+    transition: all 0.1s ease-in-out;
+    border: 3px solid #a3b5c1;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-name-container {
+    top: 0;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-address-container {
+    top: 65px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-email-container {
+    top: 130px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-nic-container {
+    top: 195px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-nic-container > input {
+    width: 45%;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-license-container {
+    top: 260px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-license-container > input {
+    width: 45%;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-nic-container > div {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    right: 20px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-nic-container > div > .reg-nic-image {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    background-color: #e2dede;
+    cursor: pointer;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-license-container > div {
+    position: absolute;
+    width: 45%;
+    height: 100%;
+    top: 0;
+    right: 20px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-license-container > div > .reg-license-image {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 5px;
+    background-color: #e2dede;
+    cursor: pointer;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-contact-container {
+    top: 325px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > .reg-customer-password-container {
+    top: 390px;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > button {
+    position: absolute;
+    width: 50%;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    left: 0;
+    right: 0;
+    top: 470px;
+    margin: auto;
+    background-color: #0000FF;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: white;
+    box-shadow: 2px 3px 4px 1px #779e9e;
+    transition: all 0.3s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container > .right-side > .registration-form-container > form > button:hover {
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container > .right-side > button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    top: 5px;
+    right: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container > .right-side > button:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.login > .registration-popup > .popup-container > .right-side > button > i {
+    position: absolute;
+    font-size: 22px;
+    left: 50%;
+    top: 50%;
+    color: gray;
+    transform: translate(-50%, -50%);
+}
+
+.login > .registration-popup > .popup-container > .left-side > h2 {
+    position: absolute;
+    z-index: 1;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 40px;
+    width: max-content;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.login > .registration-popup > .popup-container > .left-side > p {
+    position: absolute;
+    z-index: 1;
+    font-family: 'Poppins', sans-serif;
+    width: max-content;
+    color: white;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.login > .registration-popup > .popup-container > .left-side > .circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    background-color: #5562f7;
+    bottom: -150px;
+    left: -150px;
+}
+
+.login > .registration-popup > .popup-container > .left-side > .square {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #5562f7;
+    transform: rotate(45deg);
+    right: 150px;
+    top: 50px;
+}
+
+.login > .registration-popup > .popup-container > .left-side > .rectangle {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-color: #5562f7;
+    transform: rotate(135deg);
+    right: 90px;
+    top: 420px;
+}
+
+.login > .registration-popup > .popup-container > .left-side > .tangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-right: 120px solid #5562f7;
+    border-bottom: 60px solid transparent;
+    transform: rotate(135deg);
+    right: 150px;
+    top: 205px;
+}
+
+
+

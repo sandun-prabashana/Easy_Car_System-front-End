@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="viewport" content="width=device-width, initial-scale=1>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>DashBoard</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="assets/css/DashBoardstyle.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+</head>
+<body onload="switchToDashboard()">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental</H></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" id="home1">
+                        <a class="nav-link active" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/home_30px.png">Home</a>
+                        <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/signin_30px.png">Booking Vehicle</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/add_user_male_30px.png">Pay Vehicle Rental</a>
+                    </li>
+                    <li class="nav-item" id="contact">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/contact_30px.png">Contact Us</a>
+                    </li>
+                    <li class="nav-item" id="help">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="side-panel-container">
+        <aside>
+            <p> Admin </p>
+            <img src="img/content_24px.png" class="dash-png">
+            <a href="javascript:switchToDashboard();" class="btndash" id="btndash" onclick='switchToDashboard();'>
+                Dashboard
+            </a>
+            <img src="img/car_24px.png" class="car-png">
+            <a href="javascript:switchToCars();" id="btncar" onclick="switchToCars()">
+                Manage Cars
+            </a>
+            <img src="img/customer_24px.png" class="customer-png">
+            <a href="javascript:switchToCustomer();" id="btncustomer" onclick="switchToCustomer()">
+                Manage Customer
+            </a>
+            <img src="img/car_rental_24px.png" class="rental-png">
+            <a href="javascript:switchToRental();" id="btnrental" onclick="switchToRental()">
+                Rental Request
+            </a>
+            <img src="img/transaction_24px.png" class="Income-png">
+            <a href="javascript:switchToIncome();" id="btnincome" onclick="switchToIncome()">
+                Income
+            </a>
+        </aside>
+
+    </section>
+
+    <section class="main-container">
+
+        <!--===================================== DASHBOARD ==================================-->
+
+        <section class="dashboard-container">
+
+            <div class="container" style="margin-top: 50px">
+                <div class="row">
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header"><img src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png">No of registered users</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header" style="height: 67px;"><img src="img/new_ticket_40px.png">Total bookings for day</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header"><img src="img/car_50px.png">No of available Car</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header"><img src="img/car_50px.png">No of reserved cars</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+
+            <div class="container" style="margin-top: 50px">
+                <div class="row">
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header" style="height: 67px;"><img src="img/driver_40px.png">No of available Drivers</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header"style="height: 67px;"><img src="img/driver_40px.png">No of occupied Drivers</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header" style="height: 67px;"><img src="img/maintenance_40px.png">cars need maintenance</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                    <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
+                        <div class="card-header"style="height: 67px;"><img src="img/maintenance_40px.png">cars under maintenance</div>
+                        <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
+                            <h1 style="text-align: center">00</h1>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--===================================== End Of DASHBOARD==================================-->
+
+        <!--===================================== Cars ==================================-->
+
+        <section class="cars-container">
+
+            <div class="container" >
+
+                <div class="modal-content" style="margin-top: 40px">
+                    <div class="modal-header" style="background-color: turquoise;color: white">
+                        <h5 class="modal-title" id="ItexampleModalLabel">Vehicle</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="input-code">Vehicle Id</label>
+                                <input  type="text" class="form-control" id="vehicleid" aria-describedby="emailHelp" placeholder="Enter Vehicle Id">
+                                <span class="lbl-error" id="lblvehicleid"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-name">Brand</label>
+                                <input type="text" class="form-control" id="brand" aria-describedby="emailHelp" placeholder="Enter Brand">
+                                <span class="lbl-error" id="lblbrand"></span>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-qty">Color</label>
+                                <input type="text" class="form-control" id="color" placeholder="Enter Color">
+                                <span class="lbl-error" id="lblcolor"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">No_Of_Passengers</label>
+                                <input type="text" class="form-control" id="noofpassengers" placeholder="Enter No_Of_Passengers">
+                                <span class="lbl-error" id="lblnoofpassengers"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Transmission_Type</label>
+                                <input type="text" class="form-control" id="transtype" placeholder="Enter Transmission_Type">
+                                <span class="lbl-error" id="lbltranstype"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Fuel Type</label>
+                                <input type="text" class="form-control" id="fueltype" placeholder="Enter Fuel Type">
+                                <span class="lbl-error" id="lblfueltype"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Dailty_Rate</label>
+                                <input type="text" class="form-control" id="dailyrate" placeholder="Enter Dailty_Rate">
+                                <span class="lbl-error" id="lbldailyrate"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Monthly Rate</label>
+                                <input type="text" class="form-control" id="monthlyrate" placeholder="Enter Monthly Rate">
+                                <span class="lbl-error" id="lblmonthlyrate"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Extra_Km_Price</label>
+                                <input type="text" class="form-control" id="extrakmprice" placeholder="Enter Extra_Km_Price">
+                                <span class="lbl-error" id="lblextrakmprice"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Free_Mileage</label>
+                                <input type="text" class="form-control" id="freemileage" placeholder="Enter Free_Mileage">
+                                <span class="lbl-error" id="lblfreemileage"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Total_Km</label>
+                                <input type="text" class="form-control" id="totkm" placeholder="Enter Total_Km">
+                                <span class="lbl-error" id="lbltotkm"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Status</label>
+                                <input type="text" class="form-control" id="status" placeholder="Enter Status">
+                                <span class="lbl-error" id="lblstatus"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Type</label>
+                                <input type="text" class="form-control" id="type" placeholder="Enter Type">
+                                <span class="lbl-error" id="lbltype"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Front_image</label>
+                                <input type="text" class="form-control" id="frontimage" placeholder="Enter Password">
+                                <span class="lbl-error" id="lblp"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Back_image</label>
+                                <input type="text" class="form-control" id="backimage" placeholder="Enter Password">
+                                <span class="lbl-error" id="lblp"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Left_image</label>
+                                <input type="text" class="form-control" id="leftimage" placeholder="Enter Password">
+                                <span class="lbl-error" id="lblp"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-price">Right_Image</label>
+                                <input type="text" class="form-control" id="rightimage" placeholder="Enter Password">
+                                <span class="lbl-error" id="lblp"></span>
+                            </div>
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnclear" type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                        <button type="button" id="btnVupdate" class="btn btn-warning">Edit</button>
+                        <button id="delBuCu" type="button"  class="btn btn-danger">Delete</button>
+                        <button id="btnVsave" type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="container-fluid" style="margin-top: 50px; ">
+                    <div class=col>
+                        <table class="table" id="tbl_customer">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Vehicle ID</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Passagers</th>
+                                <th scope="col">Transmission_Type</th>
+                                <th scope="col">Fuel Type</th>
+                                <th scope="col">Dailty_Rate</th>
+                                <th scope="col">Monthly_Rate</th>
+                                <th scope="col">Extra_Km_Price</th>
+                                <th scope="col">Free_Mileage</th>
+                                <th scope="col">Total_Km</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Type</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblCustomer">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--===================================== End Of Cars ==================================-->
+
+        <!--===================================== Customer ==================================-->
+
+        <section class="view-customers-container">
+
+
+
+        </section>
+
+        <!--===================================== End Of Customer ==================================-->
+
+        <!--===================================== Rental ==================================-->
+
+        <section class="rental-container">
+
+
+
+        </section>
+
+        <!--===================================== End Of Rental ==================================-->
+
+        <!--===================================== Income ==================================-->
+
+        <section class="calculate-income-container">
+
+
+
+        </section>
+
+        <!--===================================== End Of Income ==================================-->
+
+    </section>
+</main>
+
+
+<script src = js/jquery-3.6.0.min.js></script>
+<script src = js/bootstrap.min.js></script>
+<script src="assets/script/DashBoard.js"></script>
+<script src="assets/script/vehiclescript.js"></script>
+
+</body>
+</html>

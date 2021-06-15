@@ -7,6 +7,7 @@
     <title>DashBoard</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="assets/css/DashBoardstyle.css" rel="stylesheet">
+    <link href="assets/css/Driverstyle.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
 </head>
 <body onload="switchToDashboard()">
@@ -63,6 +64,10 @@
             <img src="img/transaction_24px.png" class="Income-png">
             <a href="javascript:switchToIncome();" id="btnincome" onclick="switchToIncome()">
                 Income
+            </a>
+            <img src="img/driver_24px.png" class="driver-png">
+            <a href="javascript:switchToDrivers();" id="btncar" onclick="switchToDrivers()">
+                Manage Drivers
             </a>
         </aside>
 
@@ -294,7 +299,93 @@
         </section>
 
         <!--===================================== End Of Cars ==================================-->
+        <section class="view-drivers-container">
+        <div class="container" >
 
+            <div class="modal-content" style="margin-top: 40px">
+                <div class="modal-header" style="background-color: coral;color: white">
+                    <h5 class="modal-title" id="ItexampleModalLabel">Driver</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="input-code">Driver Nic</label>
+                            <input  type="text" class="form-control" id="DriverNic" aria-describedby="emailHelp" placeholder="Enter Nic">
+                            <span class="lbl-error" id="lblDriverNic"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="input-name">Name</label>
+                            <input type="text" class="form-control" id="DName" aria-describedby="emailHelp" placeholder="Enter Name">
+                            <span class="lbl-error" id="lblDName"></span>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-qty">Address</label>
+                            <input type="text" class="form-control" id="Address" placeholder="Enter address">
+                            <span class="lbl-error" id="lblAddress"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-price">Phone Number</label>
+                            <input type="text" class="form-control" id="PhoneNo" placeholder="Enter Phone Number">
+                            <span class="lbl-error" id="lblPhoneNo"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-price">Email Address</label>
+                            <input type="text" class="form-control" id="EmailAdd" placeholder="Enter Email Address">
+                            <span class="lbl-error" id="lblEmailAdd"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-price">Password</label>
+                            <input type="text" class="form-control" id="Password" placeholder="Enter Password">
+                            <span class="lbl-error" id="lblPassword"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-price">Status</label>
+                            <input type="text" class="form-control" id="Stat" placeholder="Enter Free or Busy">
+                            <span class="lbl-error" id="lblStat"></span>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnclear" type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
+                    <button type="button" id="btnEupdate" class="btn btn-warning">Edit</button>
+                    <button id="delBuCu" type="button"  class="btn btn-danger">Delete</button>
+                    <button id="btnDsave" type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="row">
+                <div class="container-fluid" style="margin-top: 50px; ">
+                    <div class=col>
+                        <table class="table" id="tbl_customer">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Driver Nic</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Phone No</th>
+                                <th scope="col">Email Address</th>
+                                <th scope="col">PassWord</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblCustomer">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
         <!--===================================== Customer ==================================-->
 
         <section class="view-customers-container">
@@ -333,6 +424,8 @@
 <script src = js/bootstrap.min.js></script>
 <script src="assets/script/DashBoard.js"></script>
 <script src="assets/script/vehiclescript.js"></script>
+<script src="assets/script/DriverScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 
 </body>
 </html>

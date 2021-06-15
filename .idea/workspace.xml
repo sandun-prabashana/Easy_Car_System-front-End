@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b90ee9c-52c3-4104-821f-d0e4ec763259" name="Default Changelist" comment="" />
+    <list default="true" id="2b90ee9c-52c3-4104-821f-d0e4ec763259" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Videos/driverLogin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/css/Driverstyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/css/mainStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (10).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (11).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (13).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (14).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (15).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (16).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (17).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (18).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (19).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (20).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (21).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (22).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (23).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (24).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (6).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (7).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (8).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/resized-image-Promo (9).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/main.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/resized-image-Promo (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/resized-image-Promo (2).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/resized-image-Promo (3).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/resized-image-Promo (4).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/script/DriverScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/front_End.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/carpool_30px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/driver_24px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/resized-image-Promo.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/welocom.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/css/DashBoardstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/css/DashBoardstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/script/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/DashBoard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/customeSave.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/customeSave.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,44 +76,89 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="TypeScript File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1tyORe6enwleVHeFXnGGjdu1u05" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/assets/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Easy_Car_System\front_End\.idea\assets\img" />
+      <recent name="E:\Easy_Car_System\front_End\.idea\assets" />
+      <recent name="E:\Easy_Car_System\front_End\.idea\assets\script" />
+      <recent name="E:\Easy_Car_System\front_End\.idea\img" />
       <recent name="E:\Easy_Car_System\front_End\.idea" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Easy_Car_System\front_End\.idea" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Easy_Car_System\front_End\.idea\assets" />
-      <recent name="E:\Easy_Car_System\front_End\.idea\js" />
+      <recent name="E:\Easy_Car_System\front_End\.idea" />
     </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b90ee9c-52c3-4104-821f-d0e4ec763259" name="Default Changelist" comment="" />
+      <created>1623737855353</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623737855353</updated>
+      <workItem from="1623737857259" duration="130000" />
+      <workItem from="1623738001838" duration="33076000" />
+    </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623660707907">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1623660707907" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1623653761448">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1623738411889">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623653761448" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623738411889" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1623746835023">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1623746835023" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -56,7 +166,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/.idea/assets/script/vehiclescript.js</url>
           <line>220</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

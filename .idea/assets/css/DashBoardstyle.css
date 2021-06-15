@@ -3,7 +3,6 @@
     font-size: 0.9em;
 }
 
-
 .header {
     width: 100vw;
     height: 60px;
@@ -68,6 +67,14 @@ aside img.car-png{
     /*background: white;*/
     position: absolute;
     top: 180px;
+    left: 11px;
+}
+
+aside img.driver-png{
+    width: 24px;
+    /*background: white;*/
+    position: absolute;
+    top: 385px;
     left: 11px;
 }
 aside img.customer-png{

@@ -9,6 +9,11 @@ function switchToDashboard() {
     $('.dashboard-container').css({display: "block"});
 }
 
+function switchToDrivers() {
+    $('.main-container>section').css({display: "none"});
+    $('.view-drivers-container').css({display: "block"});
+}
+
 
 function switchToCustomer() {
     // loadAllCustomers();

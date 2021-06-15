@@ -187,7 +187,7 @@ header > nav > .profile-container > .profile:hover {
 .home {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 180vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -711,5 +711,84 @@ header > nav > .profile-container > .profile:hover {
     top: 205px;
 }
 
+#gCar{
+    position: absolute;
+    left: 124px;
+    top: 70px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 32px;
+}
+#pCar{
+    position: absolute;
+    left: 124px;
+    top: 375px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 32px;
+}
+
+#lCar{
+    position: absolute;
+    left: 124px;
+    top: 725px;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 32px;
+}
+
+.carH{
+    font-family: 'Poppins', sans-serif;
+}
+
+#g1{
+    background: url("../img/resized-image-Promo (7).jpeg") no-repeat center;
+}
+#g2{
+    background: url("../img/resized-image-Promo (8).jpeg") no-repeat center;
+}
+#g3{
+    background: url("../img/resized-image-Promo (10).jpeg") no-repeat center;
+}
+#g4{
+    background: url("../img/resized-image-Promo (11).jpeg") no-repeat center;
+}
+#g5{
+    background: url("../img/resized-image-Promo (13).jpeg") no-repeat center;
+}
+
+#p1{
+    background: url("../img/resized-image-Promo (15).jpeg") no-repeat center;
+}
+
+#p2{
+    background: url("../img/resized-image-Promo (16).jpeg") no-repeat center;
+}
+
+#p3{
+    background: url("../img/resized-image-Promo (17).jpeg") no-repeat center;
+}
+
+#p4{
+    background: url("../img/resized-image-Promo (18).jpeg") no-repeat center;
+}
+
+#l1{
+    background: url("../img/resized-image-Promo (21).jpeg") no-repeat center;
+}
+
+#l2{
+    background: url("../img/resized-image-Promo (22).jpeg") no-repeat center;
+}
+
+#l3{
+    background: url("../img/resized-image-Promo (24).jpeg") no-repeat center;
+    background-size: cover;
 
 
+}
+
+.pop1:hover{
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}

@@ -32,14 +32,29 @@ $('#input_email').on('keydown',function (event) {
     }
 });
 
-$("#btnclear").click(function () {
-
-});
+// $("#btnCutClear").click(function () {
+//     var fileObject = $("#custNicP")[0].files[0];//access file object from input field
+//     var fileName = $("#custNicP")[0].files[0].name; //get file name
+//
+//     var data = new FormData(); //setup form data object to send file data
+//     data.append("file", fileObject, fileName); //append data
+//     $.ajax({
+//         url: 'http://localhost:8079/Spring_Final_Project_war_exploded/customer/upload',
+//         method: 'post',
+//         async: true,
+//         processData: false, //stop processing data of request body
+//         contentType: false, // stop setting content type by jQuery
+//         data: data,
+//         success: function () {
+//             alert("File Uploaded");
+//         }
+//     });
+// });
 
 
 $("#btnsave").click(function () {
 
-    let name = $("#custName").val();
+    let Cname = $("#custName").val();
     let address = $("#custAddress").val();
     let phone_No = $("#custPhone").val();
     let cnic = $("#custNic").val();
@@ -53,37 +68,90 @@ $("#btnsave").click(function () {
     var elength = $("#EmailAddress").val().length;
     var plength = $("#Password").val().length;
 
-    if (elength > 0 && plength > 0){
-        $.ajax({
-            method: "POST",
-            url: "http://localhost:8079/Spring_Final_Project_war_exploded/customer",
-            contentType: 'application/json',
-            async: true,
-            data: JSON.stringify({
-                address: address ,
-                name: name,
-                password: password,
-                id_Location:id_Location,
-                phone_No: phone_No,
-                cnic:cnic,
-                dl_Location:dl_Location,
-                email_Address:email_Address,
-                dl_No:dl_No,
-            }),
-            success: function (data,message) {
-                console.log(data);
-                alert(message);
-            },
-            error: function (data,message) {
-                alert(message);
+
+
+
+    var fileObject = $("#custNicP")[0].files[0];
+
+    var data = new FormData(); //setup form data object to send file data
+    data.append("file", fileObject); //append data
+    $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8079/Spring_Final_Project_war_exploded/customer',
+        async: true,
+        processData: false, //stop processing data of request body
+        contentType: false, // stop setting content type by jQuery
+        data: data,
+        success: function (resp) {
+            // console.log(resp.data);
+            if (resp.code == 200) {
+
+                var nicLocation=resp.data;
+
+                var fileObject = $("#DlnP")[0].files[0];
+
+                var data = new FormData(); //setup form data object to send file data
+                data.append("file", fileObject); //append data
+                $.ajax({
+                    method: 'POST',
+                    url: 'http://localhost:8079/Spring_Final_Project_war_exploded/customer',
+                    async: true,
+                    processData: false, //stop processing data of request body
+                    contentType: false, // stop setting content type by jQuery
+                    data: data,
+                    success: function (resp) {
+                        // console.log(resp.data);
+                        if (resp.code == 200) {
+                            var dlLocation=resp.data;
+                            if (elength > 0 && plength > 0) {
+                                $.ajax({
+                                    method: "POST",
+                                    url: "http://localhost:8079/Spring_Final_Project_war_exploded/customer/regUser",
+                                    contentType: 'application/json',
+                                    async: true,
+                                    data: JSON.stringify({
+                                        address: address,
+                                        name: Cname,
+                                        password: password,
+                                        id_Location: nicLocation,
+                                        phone_No: phone_No,
+                                        cnic: cnic,
+                                        dl_Location: dlLocation,
+                                        email_Address: email_Address,
+                                        dl_No: dl_No,
+                                    }),
+                                    success: function (data, resp) {
+                                        console.log(data);
+                                        swal("User Register Success", "susses");
+                                        console.log(resp.message);
+                                    },
+                                    error: function (data, resp) {
+                                        swal("User Register Fail", "Fail");
+                                        console.log(resp.message);
+                                    }
+                                });
+                            } else {
+                                swal("Fields Cannot Be Empy", "Fail");
+                            }
+
+                        } else {
+                            alert("aaa");
+                        }
+                    }
+                });
+            } else {
+                alert("aaa");
             }
-        });
-    }else {
-        alert('Fields Cannot Be Empy');
-    }
-
-
+        }
+    });
 });
+
+
+
+
+
+
+
 
 var CustomerName=/^[A-Z]{1}[a-z]{1,9}( )[A-Z]{1}[a-z]{1,9}$/;
 $('#custName').on('keydown',function (event) {

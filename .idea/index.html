@@ -7,9 +7,13 @@
     <title>Easy Car Rental</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/Profilestyle.css" rel="stylesheet">
+    <link href="assets/css/subNavigasion.css" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+
 </head>
 <body>
+<section id="view1">
 <header>
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;position: fixed">
         <div class="container-fluid">
@@ -144,22 +148,273 @@
         <form>
             <div class="email-container container-fluid">
                 <label for="txtEmail"></label>
-                <input id="input_email" placeholder="Enter email" type="text">
+                <input id="input_email" placeholder="Enter email" type="text" required>
                 <span class="lbl-error" id="lblemail" style="width: 331px;"></span>
             </div>
             <div class="password-container container-fluid">
                 <label for="password"></label>
                 <i class="far fa-eye-slash" id="password-logo" onclick="showPassword()"></i>
-                <input id="input_password" placeholder="Password" type="password">
+                <input id="input_password" placeholder="Password" type="password" required>
             </div>
             <a class="rec" href="#">Recovery password</a>
-            <button type="button" class="lbtn">Sign In</button>
+            <button type="submit" class="lbtn" id="btnSign">Sign In</button>
         </form>
     </section>
 </main>
+</section>
+
+<section id="view2">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;position: fixed">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental - Profile</H></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item home1" >
+                            <a class="nav-link active goProfile" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/profile_30px.png">Profile</a>
+                            <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active goBooking" aria-current="page" href="#Profile.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/car_theft_30px.png">Book Car</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/payment_history_30px.png">Payment</a>
+                        </li>
+                        <li class="nav-item help" >
+                            <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <input class="input100" id="Cnic" type="text" name="name" placeholder="User Nic">
+        </div>
+        <div>
+            <input class="input100" id="CDate" type="text" name="date" placeholder="Date">
+        </div>
+        <div>
+            <input class="input100" id="CName" type="text" name="name" placeholder="User Name">
+        </div>
+        <div>
+            <input class="input100" id="CAddress" type="text" name="address" placeholder="User Address">
+        </div>
+        <div>
+            <input class="input100" id="CPhone" type="text" name="address" placeholder="User Phone No">
+        </div>
+        <div>
+            <input class="input100" id="CDLN" type="text" name="address" placeholder="User Driver Licence">
+        </div>
+        <div>
+            <input class="input100" id="CEmail" type="text" name="address" placeholder="User Email Address">
+        </div>
+        <div>
+            <input class="input100" id="CPassword" type="text" name="address" placeholder="User Password">
+        </div>
+    </main>
+
+</section>
+
+<section id="view3">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;position: fixed">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental - Booking Car</H></a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item home11" >
+                            <a class="nav-link active goProfile" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/profile_30px.png">Profile</a>
+                            <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active goBooking" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/car_theft_30px.png">Book Car</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/payment_history_30px.png">Payment</a>
+                        </li>
+                        <li class="nav-item help" >
+                            <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <br>
+    <br>
+    <div class="mainnav">
+        <div class="subnav">
+            <button class="subnavbtn">Select Car <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#" id="gCarbtn">General Cars</a>
+                <a href="#" id="pCarbtn">Premium Cars</a>
+                <a href="#" id="lCarbtn">Luxury Cars</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn" id="btnBooking">Booked Selected Car</button>
+
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="#link1">Link 1</a>
+                <a href="#link2">Link 2</a>
+                <a href="#link3">Link 3</a>
+                <a href="#link4">Link 4</a>
+            </div>
+        </div>
+        <a href="#contact">Contact</a>
+    </div>
+    <main>
+        <div id="gtable">
+        <div class="row">
+            <div class="container-fluid" style="margin-top: 50px; ">
+                <div class=col>
+                    <table class="table" id="tbl_customer">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Vehicle ID</th>
+                            <th scope="col">Brand</th>
+                            <th scope="col">Color</th>
+                            <th scope="col">Passagers</th>
+                            <th scope="col">Transmission_Type</th>
+                            <th scope="col">Fuel Type</th>
+                            <th scope="col">Dailty_Rate</th>
+                            <th scope="col">Monthly_Rate</th>
+                            <th scope="col">Extra_Km_Price</th>
+                            <th scope="col">Free_Km_Day</th>
+                            <th scope="col">Free_Km_Month</th>
+                            <th scope="col">Booking</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblGVehicle">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div id="ptable">
+            <div class="row">
+                <div class="container-fluid" style="margin-top: 50px; ">
+                    <div class=col>
+                        <table class="table" id="tbl_customer">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Vehicle ID</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Passagers</th>
+                                <th scope="col">Transmission_Type</th>
+                                <th scope="col">Fuel Type</th>
+                                <th scope="col">Dailty_Rate</th>
+                                <th scope="col">Monthly_Rate</th>
+                                <th scope="col">Extra_Km_Price</th>
+                                <th scope="col">Free_Km_Day</th>
+                                <th scope="col">Free_Km_Month</th>
+                                <th scope="col">Booking</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblPVehicle">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="ltable">
+            <div class="row">
+                <div class="container-fluid" style="margin-top: 50px; ">
+                    <div class=col>
+                        <table class="table" id="tbl_customer">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Vehicle ID</th>
+                                <th scope="col">Brand</th>
+                                <th scope="col">Color</th>
+                                <th scope="col">Passagers</th>
+                                <th scope="col">Transmission_Type</th>
+                                <th scope="col">Fuel Type</th>
+                                <th scope="col">Dailty_Rate</th>
+                                <th scope="col">Monthly_Rate</th>
+                                <th scope="col">Extra_Km_Price</th>
+                                <th scope="col">Free_Km_Day</th>
+                                <th scope="col">Free_Km_Month</th>
+                                <th scope="col">Booking</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblLVehicle">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="Booking">
+        <div>
+            <input class="input100" id="Rno" type="text" name="name" placeholder="Request NO">
+        </div>
+        <div>
+            <input class="input100" id="RDate" type="text" name="date" placeholder="Date">
+        </div>
+        <div>
+            <input class="input100" id="BVid" type="text" name="name" placeholder="Vehicle ID">
+        </div>
+        <div>
+            <input class="input100" id="BCid" type="text" name="name" placeholder="Customer ID">
+        </div>
+        <div>
+            <label id="lblPdate"><b>PickUp Date</b></label>
+            <input class="input100" id="PD" type="date" name="name" placeholder="Pickup Date">
+        </div>
+        <div>
+            <label id="lblRdate"><b>Return Date</b></label>
+            <input class="input100" id="RD" type="date" name="name" placeholder="Return Date">
+        </div>
+        <div>
+            <input class="input100" id="Bldw" type="text" name="name" placeholder="Loss Damage Waiver payment">
+        </div>
+        <div>
+            <input class="input100" id="BRt" type="text" name="name" placeholder="Rate Type">
+        </div>
+        <div>
+            <input class="input100" id="BRf" type="text" name="name" placeholder="Rate Fee">
+        </div>
+        <div>
+            <label id="lblDriver"><b>Driver</b></label>
+            <label id="lblNDriver"><b>Need Driver</b></label>
+            <label id="lblDNDriver"><b>Don't Need Driver</b></label>
+        </div>
+        <div>
+            <input class="input100" id="BDid" type="radio" name="name" placeholder="Need Driver">
+        </div>
+        <div>
+            <input class="input100" id="BDDid" type="radio" name="name" placeholder="Need Driver">
+        </div>
+        <div class="form-group bankRecits">
+            <label for="input-price"><b>Bank Slip</b></label>
+            <input type="file" class="form-control" id="DlnP" placeholder="Enter Driver Licence Photo">
+            <span class="lbl-error" id="lblprice"></span>
+        </div>
+    </div>
+
+
+</section>
 <footer></footer>
 <script src = js/jquery-3.6.0.min.js></script>
 <script src = js/bootstrap.min.js></script>
 <script src="assets/script/script.js"></script>
+<script src="assets/script/Profilescript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
 </body>
 </html>

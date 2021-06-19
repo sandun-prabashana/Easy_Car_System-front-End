@@ -36,6 +36,22 @@ $('#brand').on('keydown',function (event) {
     }
 });
 
+var categary=/^[A-Z]{1}[a-z]{1,15}$/;
+$('#categary').on('keydown',function (event) {
+    var input=(event.key);
+    let inputAddress=$('#categary').val();
+    if (categary.test(inputAddress)){
+        $('#lblCategary').text('');
+        $('#categary').css('border','2px solid lime');
+        if (input=="Enter"){
+            $('#color').focus();
+        }
+    }else {
+        $('#categary').css('border','2px solid red');
+        $('#lblCategary').text('Your Input Data format Is Wrong(Ex:-General)');
+        $('#categary').focus();
+    }
+});
 var color=/^[A-Z]{1}[a-z]{1,15}$/;
 $('#color').on('keydown',function (event) {
     var input=(event.key);
@@ -52,6 +68,8 @@ $('#color').on('keydown',function (event) {
         $('#color').focus();
     }
 });
+
+
 
 var no=/^[1-9]{1,2}$/;
 $('#noofpassengers').on('keydown',function (event) {
@@ -155,20 +173,36 @@ $('#extrakmprice').on('keydown',function (event) {
     }
 });
 
-var fmilage=/^[0-9]{1,15}$/;
-$('#freemileage').on('keydown',function (event) {
+var fmilageD=/^[0-9]{1,15}$/;
+$('#freemileageDay').on('keydown',function (event) {
     var input=(event.key);
-    let inputAddress=$('#freemileage').val();
-    if (fmilage.test(inputAddress)){
-        $('#lblfreemileage').text('');
-        $('#freemileage').css('border','2px solid lime');
+    let inputAddress=$('#freemileageDay').val();
+    if (fmilageD.test(inputAddress)){
+        $('#lblfreemileageDay').text('');
+        $('#freemileageDay').css('border','2px solid lime');
+        if (input=="Enter"){
+            $('#freemileageMonth').focus();
+        }
+    }else {
+        $('#freemileageDay').css('border','2px solid red');
+        $('#lblfreemileageDay').text('Your Input Data format Is Wrong(Ex:-1)');
+        $('#freemileageDay').focus();
+    }
+});
+var fmilageM=/^[0-9]{1,15}$/;
+$('#freemileageMonth').on('keydown',function (event) {
+    var input=(event.key);
+    let inputAddress=$('#freemileageMonth').val();
+    if (fmilageM.test(inputAddress)){
+        $('#lblfreemileageMonth').text('');
+        $('#freemileageMonth').css('border','2px solid lime');
         if (input=="Enter"){
             $('#totkm').focus();
         }
     }else {
-        $('#freemileage').css('border','2px solid red');
-        $('#lblfreemileage').text('Your Input Data format Is Wrong(Ex:-1)');
-        $('#freemileage').focus();
+        $('#freemileageMonth').css('border','2px solid red');
+        $('#lblfreemileageMonth').text('Your Input Data format Is Wrong(Ex:-1)');
+        $('#freemileageMonth').focus();
     }
 });
 
@@ -224,66 +258,80 @@ $('#type').on('keydown',function (event) {
 
 
 $("#btnVsave").click(function () {
+    var fileObject = $("#frontimage")[0].files[0];
 
-    let vid = $("#vehicleid").val();
-    let brand = $("#brand").val();
-    let color = $("#color").val();
-    let no = $("#noofpassengers").val();
-    let ttype = $("#transtype").val();
-    let ftype = $("#fueltype").val();
-    let drate = $("#dailyrate").val();
-    let mrate = $("#monthlyrate").val();
-    let ekp = $("#extrakmprice").val();
-    let fm = $("#freemileage").val();
-    let tk = $("#totkm").val();
-    let s = $("#status").val();
-    let type = $("#type").val();
-    let fi = $("#frontimage").val();
-    let bi = $("#backimage").val();
-    let li = $("#leftimage").val();
-    let ri = $("#rightimage").val();
+    var data = new FormData(); //setup form data object to send file data
+    data.append("file", fileObject); //append data
+    $.ajax({
+        method: 'POST',
+        url: 'http://localhost:8079/Spring_Final_Project_war_exploded/customer',
+        async: true,
+        processData: false, //stop processing data of request body
+        contentType: false, // stop setting content type by jQuery
+        data: data,
+        success: function (resp) {
+            // console.log(resp.data);
+            if (resp.code == 200) {
+                console.log(resp.data);
+                let vid = $("#vehicleid").val();
+                let brand = $("#brand").val();
+                let categary=$("#categary").val();
+                let color = $("#color").val();
+                let no = $("#noofpassengers").val();
+                let ttype = $("#transtype").val();
+                let ftype = $("#fueltype").val();
+                let drate = $("#dailyrate").val();
+                let mrate = $("#monthlyrate").val();
+                let ekp = $("#extrakmprice").val();
+                let fmd = $("#freemileageDay").val();
+                let fmm = $("#freemileageMonth").val();
+                let tk = $("#totkm").val();
+                let s = $("#status").val();
+                let type = $("#type").val();
 
 
-    var elength = $("#fueltype").val().length;
-    var plength = $("#type").val().length;
+                var elength = $("#fueltype").val().length;
+                var plength = $("#type").val().length;
 
-    if (elength > 0 && plength > 0){
-        $.ajax({
-            method: "POST",
-            url: "http://localhost:8079/Spring_Final_Project_war_exploded/vehicle",
-            contentType: 'application/json',
-            async: true,
-            data: JSON.stringify({
-                color: color,
-                type: type,
-                status: s,
-                no_Of_Passenger: no,
-                transmission_Type: ttype,
-                extra_Km_Price: ekp,
-                vid: vid,
-                front_Image: fi,
-                back_Image: bi,
-                daily_Rate: drate,
-                brand: brand,
-                left_Image: li,
-                fuel_Type: ftype,
-                monthly_Rate: mrate,
-                free_Mileage: fm,
-                right_Image: ri,
-                total_Km: tk,
-            }),
-            success: function (data,message) {
-                console.log(data);
-                alert(message);
-            },
-            error: function (data,message) {
-                alert(message);
+                if (elength > 0 && plength > 0){
+                    $.ajax({
+                        method: "POST",
+                        url: "http://localhost:8079/Spring_Final_Project_war_exploded/vehicle",
+                        contentType: 'application/json',
+                        async: true,
+                        data: JSON.stringify({
+                            color: color,
+                            type: type,
+                            status: s,
+                            category:categary,
+                            no_Of_Passenger: no,
+                            transmission_Type: ttype,
+                            extra_Km_Price: ekp,
+                            vid: vid,
+                            front_Image: resp.data,
+                            daily_Rate: drate,
+                            brand: brand,
+                            fuel_Type: ftype,
+                            monthly_Rate: mrate,
+                            free_Km_For_Day:fmd,
+                            free_Km_For_Month:fmm,
+                            total_Km: tk,
+                        }),
+                        success: function (data,message) {
+                            swal("Vehicle Save Sussesfull","success" );
+
+                        },
+                        error: function (data,message) {
+                            swal("Vehicle Save Fail","fail" );
+                        }
+                    });
+                }else {
+                    swal("Fields Cannot Be Empy","fail" );
+
+                }
             }
-        });
-    }else {
-        alert('Fields Cannot Be Empy');
-    }
-
+        }
+    });
 
 });
 
@@ -349,6 +397,45 @@ $("#btnVupdate").click(function () {
     }else {
         alert('Fields Cannot Be Empy');
     }
-
-
 });
+
+
+$("#deleteVehicle").click(function () {
+    let vid = $("#vehicleid").val();
+
+    $.ajax({
+        method: "DELETE",
+        url: "http://localhost:8079/Spring_Final_Project_war_exploded/vehicle/?vid="+vid,
+        async: true,
+        success: function (data) {
+            swal("Vehicle Delete Sussesfull","success" );
+
+        },
+        error: function (err) {
+            console.log(err);
+            swal("Vehicle Delete Fail","fail" );
+        }
+    });
+});
+
+$(".btnDriver").click(function () {
+    $("#tblVehicle").empty();
+    $.ajax({
+        method: 'GET',
+        url: 'http://localhost:8079/Spring_Final_Project_war_exploded/vehicle',
+        async: true,
+        success: function (response) {
+            console.log(response);
+            let array = response.data;
+            for (let i of array) {
+                let row = `<tr><td>${i.vid}</td><td>${i.brand}</td><td>${i.color}</td><td>${i.no_Of_Passenger}</td><td>${i.transmission_Type}</td><td>${i.fuel_Type}</td><td>${i.daily_Rate}</td>
+                            <td>${i.monthly_Rate}</td><td>${i.extra_Km_Price}</td><td>${i.free_Km_For_Day}</td><td>${i.free_Km_For_Month}</td><td>${i.total_Km}</td><td>${i.status}</td><td>${i.type}</td></tr>`;
+                $("#tblVehicle").append(row);
+            }
+
+        }
+    });
+
+    console.log("aaa");
+})
+

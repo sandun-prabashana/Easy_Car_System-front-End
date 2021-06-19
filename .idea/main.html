@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Easy Car Rental System</title>
-    <link href="normalize.css" rel="stylesheet">
     <link href="assets/css/mainStyle.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <style>
@@ -148,12 +147,12 @@
                 <h1 style="text-align: center;padding-top: 38px;">User</h1>
             </div>
         </div></a></div>
-        <div class="col user" id="driver"><a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" style="text-decoration: none"><div id="clickDriver" class="card pop mb-3" style="max-width: 18rem;">
+        <div class="col user" id="driver"><a class="empty" onclick="document.getElementById('id01').style.display='block'" style="width:auto;text-decoration: none" ><div id="clickDriver" class="card pop mb-3" style="max-width: 18rem;">
             <div class="card-body  a" id="driverimg" style="color: yellow">
                 <h1 style="text-align: center;padding-top: 38px;">Driver</h1>
             </div>
         </div></a></div>
-        <div class="col user" id="admin"><a href="test.html" style="text-decoration: none"><div class="card pop mb-3" style="max-width: 18rem;">
+        <div class="col user" id="admin"><a class="empty" onclick="document.getElementById('id04').style.display='block'" style="width:auto;text-decoration: none" ><div class="card pop mb-3" style="max-width: 18rem;">
             <div class="card-body  a"  id="adminimg" style="color: lime">
                 <h1 style="text-align: center;padding-top: 38px;">Admin</h1>
             </div>
@@ -161,9 +160,9 @@
     </div>
 </div>
 
-<div id="id01" class="modal">
+<div id="id01" class="modal login">
 
-    <form class="modal-content animate" action="/action_page.php" method="post">
+    <form class="modal-content animate">
         <div class="imgcontainer">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <div><b>Login</b></div>
@@ -171,17 +170,44 @@
 
         <div class="container">
             <label for="uname"><b>Email Address</b></label>
-            <input type="text" placeholder="Enter Email Address" name="email" required>
+            <input id="driverEmail" type="text" placeholder="Enter Email Address" name="email" required>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input id="driverPassword"type="password" placeholder="Enter Password" name="psw" required>
 
-            <button type="submit">Login</button>
+            <button type="button" id="driverLogin">Login</button>
         </div>
 
         <div class="container fotter" style="background-color:#f1f1f1">
             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <span class="psw" >Forgot <a href="#" id="forgetbtn" >password?</a></span>
+        </div>
+    </form>
+</div>
+
+
+
+<div id="id04" class="modal login">
+
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div><b>Login</b></div>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Email Address</b></label>
+            <input id="adminEmail" type="text" placeholder="Enter Email Address" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input id="adminPassword"type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="button" id="adminLogin" >Login</button>
+        </div>
+
+        <div class="container fotter" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw" >Forgot <a href="#" id="forgetAbtn" >password?</a></span>
         </div>
     </form>
 </div>
@@ -191,16 +217,70 @@
 
 
 
+
+
+
+
+<div id="id02" class="modal forget" >
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div><b>Forget Password</b></div>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Your Nic Number</b></label>
+            <input id="forgetEmail" type="text" placeholder="Enter Email Address" name="email" >
+
+            <label for="psw"><b>Password</b></label>
+            <input id="forgetPassword"type="text" placeholder="Enter Password" name="psw" disabled>
+
+            <button type="button" id="DriverForgetPassword">Show</button>
+        </div>
+
+        <div class="container fotter" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+
+<div id="id03" class="modal forget" >
+    <form class="modal-content animate">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <div><b>Forget Password</b></div>
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Your Nic Number</b></label>
+            <input id="forgetAEmail" type="text" placeholder="Enter Email Address" name="email" >
+
+            <label for="psw"><b>Password</b></label>
+            <input id="forgetAPassword"type="text" placeholder="Enter Password" name="psw" disabled>
+
+            <button type="button"  id="AdminForgetPassword">Show</button>
+        </div>
+
+        <div class="container fotter" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+<script src = js/jquery-3.6.0.min.js></script>
+<script src="assets/script/mainSrict.js"></script>
+<script src = js/bootstrap.min.js></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+
 </script>
 
-<script>
-    var modal = document.getElementById('id01');
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 $("#Stat").val('Free');
 
 
-var Did=/^[A-z]{1}[0-9]{8,16}$/;
+var Did=/^[0-9]{8,15}(V)$/;
 $('#DriverNic').on('keydown',function (event) {
     var input=(event.key);
     let inputAddress=$('#DriverNic').val();
@@ -9,11 +9,11 @@ $('#DriverNic').on('keydown',function (event) {
         $('#lblDriverNic').text('');
         $('#DriverNic').css('border','2px solid lime');
         if (input=="Enter"){
-            $('#Name').focus();
+            $('#DName').focus();
         }
     }else {
         $('#DriverNic').css('border','2px solid red');
-        $('#lblDriverNic').text('Your Input Data format Is Wrong(Ex:-AAA-1111)');
+        $('#lblDriverNic').text('Your Input Data format Is Wrong(Ex:-111111111V)');
         $('#DriverNic').focus();
     }
 });
@@ -30,7 +30,7 @@ $('#DName').on('keydown',function (event) {
         }
     }else {
         $('#DName').css('border','2px solid red');
-        $('#lblDName').text('Your Input Data format Is Wrong(Ex:-Toyota)');
+        $('#lblDName').text('Your Input Data format Is Wrong(Ex:-Saman)');
         $('#DName').focus();
     }
 });
@@ -47,12 +47,12 @@ $('#Address').on('keydown',function (event) {
         }
     }else {
         $('#Address').css('border','2px solid red');
-        $('#lblAddress').text('Your Input Data format Is Wrong(Ex:-Red)');
+        $('#lblAddress').text('Your Input Data format Is Wrong(Ex:-Colombo)');
         $('#Address').focus();
     }
 });
 
-var no=/^[0-9]{3}(-)[0-9]{7}$/;
+var no=/^[0-9]{10}$/;
 $('#PhoneNo').on('keydown',function (event) {
     var input=(event.key);
     let inputAddress=$('#PhoneNo').val();
@@ -64,7 +64,7 @@ $('#PhoneNo').on('keydown',function (event) {
         }
     }else {
         $('#PhoneNo').css('border','2px solid red');
-        $('#lblPhoneNo').text('Your Input Data format Is Wrong(Ex:-2)');
+        $('#lblPhoneNo').text('Your Input Data format Is Wrong(Ex:-111111111)');
         $('#PhoneNo').focus();
     }
 });
@@ -77,11 +77,11 @@ $('#EmailAdd').on('keydown',function (event) {
         $('#lblEmailAdd').text('');
         $('#EmailAdd').css('border','2px solid lime');
         if (input=="Enter"){
-            $('#Password').focus();
+            $('#Stat').focus();
         }
     }else {
         $('#EmailAdd').css('border','2px solid red');
-        $('#lblEmailAdd').text('Your Input Data format Is Wrong(Ex:-Auto)');
+        $('#lblEmailAdd').text('Your Input Data format Is Wrong(Ex:-name@gmail.com)');
         $('#EmailAdd').focus();
     }
 });
@@ -98,7 +98,7 @@ $('#Stat').on('keydown',function (event) {
         }
     }else {
         $('#Stat').css('border','2px solid red');
-        $('#lblStat').text('Your Input Data format Is Wrong(Ex:-1000.00)');
+        $('#lblStat').text('Your Input Data format Is Wrong(Ex:-Free or Busy)');
         $('#Stat').focus();
     }
 });
@@ -125,8 +125,8 @@ $("#btnDsave").click(function () {
             async: true,
             data: JSON.stringify({
                 dnic:did,
-                address:name,
-                email:address,
+                address:address,
+                email:email,
                 name:name,
                 no:phone_No,
                 password:password,
@@ -186,3 +186,24 @@ $("#btnEupdate").click(function () {
         swal("Fields Cannot Be Empy","warning" );
     }
 });
+
+$(".btnDriver").click(function () {
+
+    $("#tblDriver").empty();
+    $.ajax({
+        method: 'GET',
+        url: 'http://localhost:8079/Spring_Final_Project_war_exploded/driver',
+        async: true,
+        success: function (response) {
+            console.log(response);
+            let array = response.data;
+            for (let i of array) {
+                let row = `<tr><td>${i.dnic}</td><td>${i.name}</td><td>${i.address}</td><td>${i.no}</td><td>${i.email}</td><td>${i.password}</td><td>${i.status}</td></tr>`;
+                $("#tblDriver").append(row);
+            }
+
+        }
+    });
+
+    console.log("aaa");
+})

@@ -50,11 +50,11 @@
                 Dashboard
             </a>
             <img src="img/car_24px.png" class="car-png">
-            <a href="javascript:switchToCars();" id="btncar" onclick="switchToCars()">
+            <a href="javascript:switchToCars();" class="btnGetCar" id="btncar" onclick="switchToCars()">
                 Manage Cars
             </a>
             <img src="img/customer_24px.png" class="customer-png">
-            <a href="javascript:switchToCustomer();" id="btncustomer" onclick="switchToCustomer()">
+            <a href="javascript:switchToCustomer();" id="btncustomer" class="loadtbl" onclick="switchToCustomer()">
                 Manage Customer
             </a>
             <img src="img/car_rental_24px.png" class="rental-png">
@@ -66,7 +66,7 @@
                 Income
             </a>
             <img src="img/driver_24px.png" class="driver-png">
-            <a href="javascript:switchToDrivers();" id="btncar" onclick="switchToDrivers()">
+            <a href="javascript:switchToDrivers();" class="btnDriver" id="btncar" onclick="switchToDrivers()">
                 Manage Drivers
             </a>
         </aside>
@@ -166,6 +166,12 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="input-qty">Categary</label>
+                                <input type="text" class="form-control" id="categary" placeholder="Enter Categary">
+                                <span class="lbl-error" id="lblCategary"></span>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="input-qty">Color</label>
                                 <input type="text" class="form-control" id="color" placeholder="Enter Color">
                                 <span class="lbl-error" id="lblcolor"></span>
@@ -208,9 +214,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="input-price">Free_Mileage</label>
-                                <input type="text" class="form-control" id="freemileage" placeholder="Enter Free_Mileage">
-                                <span class="lbl-error" id="lblfreemileage"></span>
+                                <label for="input-price">Free_Km_For_Day</label>
+                                <input type="text" class="form-control" id="freemileageDay" placeholder="Enter Free_Km_For_Day">
+                                <span class="lbl-error" id="lblfreemileageDay"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-price">Free_Km_For_Month</label>
+                                <input type="text" class="form-control" id="freemileageMonth" placeholder="Enter Free_Km_For_Month">
+                                <span class="lbl-error" id="lblfreemileageMonth"></span>
                             </div>
 
                             <div class="form-group">
@@ -233,27 +244,10 @@
 
                             <div class="form-group">
                                 <label for="input-price">Front_image</label>
-                                <input type="text" class="form-control" id="frontimage" placeholder="Enter Password">
+                                <input type="file" class="form-control" id="frontimage" placeholder="Add Image">
                                 <span class="lbl-error" id="lblp"></span>
                             </div>
 
-                            <div class="form-group">
-                                <label for="input-price">Back_image</label>
-                                <input type="text" class="form-control" id="backimage" placeholder="Enter Password">
-                                <span class="lbl-error" id="lblp"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="input-price">Left_image</label>
-                                <input type="text" class="form-control" id="leftimage" placeholder="Enter Password">
-                                <span class="lbl-error" id="lblp"></span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="input-price">Right_Image</label>
-                                <input type="text" class="form-control" id="rightimage" placeholder="Enter Password">
-                                <span class="lbl-error" id="lblp"></span>
-                            </div>
 
 
                         </form>
@@ -261,7 +255,7 @@
                     <div class="modal-footer">
                         <button id="btnclear" type="button" class="btn btn-secondary" data-dismiss="modal">Clear</button>
                         <button type="button" id="btnVupdate" class="btn btn-warning">Edit</button>
-                        <button id="delBuCu" type="button"  class="btn btn-danger">Delete</button>
+                        <button id="deleteVehicle" type="button"  class="btn btn-danger">Delete</button>
                         <button id="btnVsave" type="button" class="btn btn-primary">Save</button>
                     </div>
                 </div>
@@ -282,13 +276,14 @@
                                 <th scope="col">Dailty_Rate</th>
                                 <th scope="col">Monthly_Rate</th>
                                 <th scope="col">Extra_Km_Price</th>
-                                <th scope="col">Free_Mileage</th>
+                                <th scope="col">Free_Km_Day</th>
+                                <th scope="col">Free_Km_Month</th>
                                 <th scope="col">Total_Km</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Type</th>
                             </tr>
                             </thead>
-                            <tbody id="tblCustomer">
+                            <tbody id="tblVehicle">
 
                             </tbody>
                         </table>
@@ -377,7 +372,7 @@
                                 <th scope="col">Status</th>
                             </tr>
                             </thead>
-                            <tbody id="tblCustomer">
+                            <tbody id="tblDriver">
 
                             </tbody>
                         </table>
@@ -391,7 +386,28 @@
         <section class="view-customers-container">
 
 
+            <div class="row">
+                <div class="container-fluid" style="margin-top: 50px; ">
+                    <div class=col>
+                        <table class="table" id="tbl_customer">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Customer Nic</th>
+                                <th scope="col">Drive License No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Phone Number</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Password</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblCustomerdata">
 
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!--===================================== End Of Customer ==================================-->
@@ -425,6 +441,7 @@
 <script src="assets/script/DashBoard.js"></script>
 <script src="assets/script/vehiclescript.js"></script>
 <script src="assets/script/DriverScript.js"></script>
+<script src="assets/script/customerSrict.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 
 </body>

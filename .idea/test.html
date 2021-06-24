@@ -15,24 +15,12 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental</H></a>
+            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental-Admin</H></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" id="home1">
-                        <a class="nav-link active" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/home_30px.png">Home</a>
+                        <a class="nav-link active" aria-current="page" href="main.html" style="font-weight: bold;font-size:large;color: #6D4C41;margin-left: 790px;"><img src="img/home_30px.png">Home</a>
                         <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/signin_30px.png">Booking Vehicle</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/add_user_male_30px.png">Pay Vehicle Rental</a>
-                    </li>
-                    <li class="nav-item" id="contact">
-                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/contact_30px.png">Contact Us</a>
-                    </li>
-                    <li class="nav-item" id="help">
-                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/help_30px.png">Help</a>
                     </li>
                 </ul>
             </div>
@@ -84,25 +72,25 @@
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header"><img src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png">No of registered users</div>
                         <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
-                            <h1 style="text-align: center">00</h1>
+                            <h1 style="text-align: center" id="CustCount">00</h1>
                         </div>
                     </div></div>
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header" style="height: 67px;"><img src="img/new_ticket_40px.png">Total bookings for day</div>
                         <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
-                            <h1 style="text-align: center">00</h1>
+                            <h1 style="text-align: center" id="bookingCount">00</h1>
                         </div>
                     </div></div>
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header"><img src="img/car_50px.png">No of available Car</div>
                         <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
-                            <h1 style="text-align: center">00</h1>
+                            <h1 style="text-align: center" id="AvalableCar">00</h1>
                         </div>
                     </div></div>
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header"><img src="img/car_50px.png">No of reserved cars</div>
                         <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
-                            <h1 style="text-align: center">00</h1>
+                            <h1 style="text-align: center" id="BusyCar">00</h1>
                         </div>
                     </div></div>
                 </div>
@@ -113,13 +101,13 @@
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header" style="height: 67px;"><img src="img/driver_40px.png">No of available Drivers</div>
                         <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
-                            <h1 style="text-align: center">00</h1>
+                            <h1 style="text-align: center" id="FreeDriver">00</h1>
                         </div>
                     </div></div>
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
                         <div class="card-header"style="height: 67px;"><img src="img/driver_40px.png">No of occupied Drivers</div>
                         <div class="card-body text-primary" style="background-image: linear-gradient(to top, lime 0%, #f5efef 100%);">
-                            <h1 style="text-align: center">00</h1>
+                            <h1 style="text-align: center" id="BusyDriver">00</h1>
                         </div>
                     </div></div>
                     <div class="col"><div class="card border-primary mb-3" style="max-width: 18rem;">
@@ -415,8 +403,33 @@
         <!--===================================== Rental ==================================-->
 
         <section class="rental-container">
+            <input type="text" class="form-control" id="Reson" placeholder="What is Reason">
 
+            <div class="row" style="padding-top: 25px;">
+                <div class="container-fluid" style="margin-top: 50px; ">
+                    <div class=col>
+                        <table class="table" id="tbl_customer">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Request ID</th>
+                                <th scope="col">Driver Nic</th>
+                                <th scope="col">Vehicle Id</th>
+                                <th scope="col">Customer Nic</th>
+                                <th scope="col">PickUp Date</th>
+                                <th scope="col">Return Date</th>
+                                <th scope="col">LDW Free</th>
+                                <th scope="col">Bank Slip</th>
+                                <th scope="col">Accept</th>
+                                <th scope="col">Rejcet</th>
+                            </tr>
+                            </thead>
+                            <tbody id="tblRequsetforAdmin">
 
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
         </section>
 
@@ -442,6 +455,7 @@
 <script src="assets/script/vehiclescript.js"></script>
 <script src="assets/script/DriverScript.js"></script>
 <script src="assets/script/customerSrict.js"></script>
+<script src="assets/script/countScript.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 
 </body>

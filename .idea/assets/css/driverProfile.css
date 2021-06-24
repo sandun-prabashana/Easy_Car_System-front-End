@@ -1,0 +1,22 @@
+#driverDetail{
+position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 600px;
+    height: 380px;
+    top: 170px;
+}
+
+.inputSpace{
+    margin-bottom: 15px;
+}
+
+#ddate{
+    position: absolute;
+    width: 175px;
+    margin: auto;
+    right: 0;
+    top: 66px;
+    border-radius: 10px;
+}

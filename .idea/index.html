@@ -157,7 +157,7 @@
                 <input id="input_password" placeholder="Password" type="password" required>
             </div>
             <a class="rec" href="#">Recovery password</a>
-            <button type="submit" class="lbtn" id="btnSign">Sign In</button>
+            <button type="button" class="lbtn" id="btnSign">Sign In</button>
         </form>
     </section>
 </main>
@@ -190,28 +190,48 @@
     </header>
     <main>
         <div>
-            <input class="input100" id="Cnic" type="text" name="name" placeholder="User Nic">
+            <input class="input100" id="Cnic" type="text" name="name" placeholder="User Nic" disabled>
         </div>
         <div>
-            <input class="input100" id="CDate" type="text" name="date" placeholder="Date">
+            <input class="input100" id="CDate" type="text" name="date" placeholder="Date" disabled>
         </div>
-        <div>
-            <input class="input100" id="CName" type="text" name="name" placeholder="User Name">
-        </div>
-        <div>
-            <input class="input100" id="CAddress" type="text" name="address" placeholder="User Address">
-        </div>
-        <div>
-            <input class="input100" id="CPhone" type="text" name="address" placeholder="User Phone No">
-        </div>
-        <div>
-            <input class="input100" id="CDLN" type="text" name="address" placeholder="User Driver Licence">
-        </div>
-        <div>
-            <input class="input100" id="CEmail" type="text" name="address" placeholder="User Email Address">
-        </div>
-        <div>
-            <input class="input100" id="CPassword" type="text" name="address" placeholder="User Password">
+<!--        <div>-->
+<!--            <input class="input100" id="CName" type="text" name="name" placeholder="User Name">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input class="input100" id="CAddress" type="text" name="address" placeholder="User Address">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input class="input100" id="CPhone" type="text" name="address" placeholder="User Phone No">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input class="input100" id="CDLN" type="text" name="address" placeholder="User Driver Licence">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input class="input100" id="CEmail" type="text" name="address" placeholder="User Email Address">-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <input class="input100" id="CPassword" type="text" name="address" placeholder="User Password">-->
+<!--        </div>-->
+        <div id="custDetail">
+            <label for="input-qty">User Name</label>
+            <input type="text" class="form-control inputSpace" id="custName" placeholder="Enter Name" disabled>
+
+            <label for="input-qty">User Address</label>
+            <input type="text" class="form-control  inputSpace" id="custAddress" placeholder="Enter Address" disabled>
+
+            <label for="input-qty">User Phone No</label>
+            <input type="text" class="form-control inputSpace" id="custNo" placeholder="Enter Phone No" disabled>
+
+
+            <label for="input-qty">User Driver Licence No</label>
+            <input type="text" class="form-control inputSpace" id="custLNo" placeholder="Enter Licence No" disabled>
+
+            <label for="input-qty">User Email Address</label>
+            <input type="text" class="form-control inputSpace" id="custEmail" placeholder="Enter Email Address" disabled>
+
+            <label for="input-qty">User Password</label>
+            <input type="text" class="form-control inputSpace" id="custPassword" placeholder="Enter Password" disabled>
         </div>
     </main>
 
@@ -259,15 +279,8 @@
 
         </div>
         <div class="subnav">
-            <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="#link1">Link 1</a>
-                <a href="#link2">Link 2</a>
-                <a href="#link3">Link 3</a>
-                <a href="#link4">Link 4</a>
-            </div>
+            <button class="subnavbtn" id="btnRequest">Booking Request </button>
         </div>
-        <a href="#contact">Contact</a>
     </div>
     <main>
         <div id="gtable">
@@ -384,12 +397,17 @@
             <input class="input100" id="Bldw" type="text" name="name" placeholder="Loss Damage Waiver payment">
         </div>
         <div>
-            <input class="input100" id="BRt" type="text" name="name" placeholder="Rate Type">
+<!--            <input class="input100" id="BRt" type="text" name="name" placeholder="Rate Type">-->
+            <select name="rate" id="BRt">
+                <option value="Month">Month</option>
+                <option value="Day">Day</option>
+            </select>
         </div>
         <div>
             <input class="input100" id="BRf" type="text" name="name" placeholder="Rate Fee">
         </div>
         <div>
+            <label id="lblrate"><b>Rate Type</b></label>
             <label id="lblDriver"><b>Driver</b></label>
             <label id="lblNDriver"><b>Need Driver</b></label>
             <label id="lblDNDriver"><b>Don't Need Driver</b></label>
@@ -404,6 +422,33 @@
             <label for="input-price"><b>Bank Slip</b></label>
             <input type="file" class="form-control" id="DlnP" placeholder="Enter Driver Licence Photo">
             <span class="lbl-error" id="lblprice"></span>
+        </div>
+        <div id="btnreq">
+            <button id="reqbtn">Reuest Send</button>
+        </div>
+    </div>
+    <div id="bookingRq">
+        <div class="row">
+            <div class="container-fluid" style="margin-top: 50px; ">
+                <div class=col>
+                    <table class="table" id="tbl_customer">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">Request ID</th>
+                            <th scope="col">Driver Nic</th>
+                            <th scope="col">Vehicle Id</th>
+                            <th scope="col">PickUp Date</th>
+                            <th scope="col">Return Date</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Reason</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tblRequset">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 

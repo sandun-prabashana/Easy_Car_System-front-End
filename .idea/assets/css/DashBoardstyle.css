@@ -1042,3 +1042,21 @@ aside p {
 }
 
 
+#Reson{
+position: absolute;
+    width: 400px;
+    left: 400px;
+    margin-top: 10px;
+}
+
+#accept{
+    background-image: url("../img/approval_30px.png");
+    width: 33.97728px;
+    height: 33.97728px;
+}
+
+#reject{
+    background-image: url("../img/cancel_30px.png");
+    width: 33.97728px;
+    height: 33.97728px;
+}

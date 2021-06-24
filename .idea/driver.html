@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="viewport" content="width=device-width, initial-scale=1>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Easy Car Rental</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/driverProfile.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: lime;position: fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: #6D4C41;font-size:x-large;font-weight: bold;"><img src="img/car_30px.png"><H>Easy Car Rental-Driver</H></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" id="home1">
+                        <a class="nav-link active" aria-current="page" href="#home" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/profile_30px.png">Profile</a>
+                        <!--                    <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#login" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/schedule_30px.png">Schedule</a>
+                    </li>
+                    <li class="nav-item" id="help">
+                        <a class="nav-link active" aria-current="page" href="placeOrder.html" style="font-weight: bold;font-size:large;color: #6D4C41"><img src="img/home_30px.png">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<section id="DProfile">
+
+    <input type="text" class="form-control " id="ddate" placeholder="date" disabled>
+
+
+    <div id="driverDetail">
+        <label for="input-qty">Driver Nic</label>
+        <input type="text" class="form-control inputSpace" id="dnic" placeholder="Enter Nic" disabled>
+
+        <label for="input-qty">Driver Name</label>
+        <input type="text" class="form-control  inputSpace" id="dname" placeholder="Enter Name" disabled>
+
+        <label for="input-qty">Driver Address</label>
+        <input type="text" class="form-control inputSpace" id="daddress" placeholder="Enter Address" disabled>
+
+
+        <label for="input-qty">Driver Phone No</label>
+        <input type="text" class="form-control inputSpace" id="dno" placeholder="Enter Phone No" disabled>
+
+        <label for="input-qty">Driver Email Address</label>
+        <input type="text" class="form-control inputSpace" id="demail" placeholder="Enter Email Address" disabled>
+
+        <label for="input-qty">Driver Password</label>
+        <input type="text" class="form-control inputSpace" id="dpassword" placeholder="Enter Password" disabled>
+    </div>
+</section>
+<section id="Schedule">
+
+</section>
+
+
+
+
+<script src = js/jquery-3.6.0.min.js></script>
+<script src = js/bootstrap.min.js></script>
+<script src="assets/script/mainSrict.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+</body>
+</html>

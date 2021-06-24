@@ -20,22 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2b90ee9c-52c3-4104-821f-d0e4ec763259" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assets/css/Profilestyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assets/css/subNavigasion.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assets/img/add_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assets/img/add_new_20px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assets/script/Profilescript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assets/script/customerSrict.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/assets/script/mainSrict.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/img/car_theft_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/img/payment_history_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/img/profile_30px.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/css/driverProfile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/approval_30px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/img/cancel_30px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/assets/script/countScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/driver.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/approval_30px.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/img/schedule_30px.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/css/DashBoardstyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/css/DashBoardstyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/css/Profilestyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/css/Profilestyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/assets/script/DashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/DashBoard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assets/script/DriverScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/DriverScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assets/script/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assets/script/vehiclescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/vehiclescript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/customeSave.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/customeSave.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/script/Profilescript.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/Profilescript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets/script/mainSrict.js" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets/script/mainSrict.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/main.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test.html" afterDir="false" />
@@ -72,7 +68,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/assets/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring Final Project" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -105,6 +101,10 @@
       <workItem from="1623838354152" duration="19053000" />
       <workItem from="1623910255520" duration="18397000" />
       <workItem from="1624029270512" duration="8346000" />
+      <workItem from="1624255035130" duration="1106000" />
+      <workItem from="1624258889291" duration="15354000" />
+      <workItem from="1624344079500" duration="11744000" />
+      <workItem from="1624436551915" duration="33774000" />
     </task>
     <servers />
   </component>
@@ -128,14 +128,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="440" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1623660707907" />
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1623922560929">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1624436748618">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1623922560929" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1623913028126">
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1624436748618" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1624566505751">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1623913028126" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1624566505751" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1624265455824">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1624265455824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
